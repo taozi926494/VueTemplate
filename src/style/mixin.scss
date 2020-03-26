@@ -1,0 +1,12 @@
+@mixin flex($direction: row, $mainAxis: center, $crossAxis: center, $multiAxis: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $mainAxis;
+    align-items: $crossAxis;
+    align-content: $multiAxis;
+}
+
+@mixin shadow-card {
+    box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
