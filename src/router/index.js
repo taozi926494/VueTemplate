@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home/Home.vue'
 import layout from '../views/Layout/Layout.vue';
 
 Vue.use(VueRouter)
@@ -12,12 +11,17 @@ const routes = [{
     component: layout,
     children: [{
         path: '/home',
-        component: Home
+        component: () =>
+            import ('@/views/Home/Home.vue')
+    }, {
+        path: '/dataResource',
+        component: () =>
+            import ('@/views/DataResource/DataResource.vue')
     }]
 }]
 
 const router = new VueRouter({
-    mode: 'history',
+    mode: 'hash',
     base: process.env.BASE_URL,
     routes
 })
