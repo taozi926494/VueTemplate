@@ -19,7 +19,7 @@ export default {
 
 <style lang="scss">
 #layout {
-  @include flex(column);
+  @include flex(column, flex-start);
   height: 100%;
 }
 #container {
